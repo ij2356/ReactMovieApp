@@ -11,8 +11,9 @@ function Array() {
     setTextArray([textValue, ...textArray]);
   };
 
-  const arrayDelete = () => {
-    setTextArray((e) => {})
+  const arrayDelete = (e) => {
+    const li = e.target.parentElement;
+    li.remove(); 
   }
 
 
@@ -21,12 +22,17 @@ function Array() {
     <>
       <input className="" value={textValue} onChange={textType} />
       <button onClick={arraySetting}>배열넣기</button>
-      <button onClick={arrayDelete}>배열 앞 삭제</button>
+      <button>배열 앞 삭제</button>
       <div className="textbox">
         <ul>
           {
-            textArray.map( (item, key) => {
-              return (<li key={key}>{item}</li>)
+            textArray.map((item, key) => {
+              return (
+                <li key={key} className={"i" + key}>
+                  {item}
+                  <button onClick={arrayDelete}>❌</button>
+                </li>
+              );
             })
           }
         </ul>
