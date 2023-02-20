@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+ import $ from "jquery";
 
 function Array() {
   const [textValue, setTextValue] = useState("");
@@ -10,13 +11,17 @@ function Array() {
   const arraySetting = (e) => {
     setTextArray([textValue, ...textArray]);
   };
-
-  const arrayDelete = (e) => {
-    const li = e.target.parentElement;
-    li.remove(); 
+ 
+  const a = e => {
+     let z = textArray;   
+    z= z.splice(1,z.length-1)
+    setTextArray(z);
   }
-
-
+  const z = (e) => {
+   
+    let a = document.querySelector('.test');
+    console.log(a);
+  }
   useEffect(() => console.log(textArray), [textArray]);
   return (
     <>
@@ -24,21 +29,23 @@ function Array() {
       <button onClick={arraySetting}>배열넣기</button>
       <button>배열 앞 삭제</button>
       <div className="textbox">
+        <div className="test" onClick={z}>
+          부모
+        </div>
         <ul>
-          {
-            textArray.map((item, key) => {
-              return (
-                <li key={key} className={"i" + key}>
-                  {item}
-                  <button onClick={arrayDelete}>❌</button>
-                </li>
-              );
-            })
-          }
+          {textArray.map((item, key) => {
+            return (
+              <li key={key} className={"i" + key}>
+                {item}
+                <button onClick={a}>이것도</button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </>
   );
 }
+
 
 export default Array;
