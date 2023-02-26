@@ -1,4 +1,4 @@
-import { ReactPropTypes } from "react";
+import React, { ReactPropTypes } from "react";
 
 function Movie({ img, title, rating, genres }) {
   return (

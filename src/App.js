@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Array from "./ArrayState.js";
 import Movie from "./movie.js";
 import Coin from "./coin.js";
