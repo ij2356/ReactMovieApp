@@ -1,6 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Array from "./ArrayState.js";
+import Movie from "./movie.js";
 import Coin from "./coin.js";
 import "./css/index.css";
 
@@ -31,23 +32,7 @@ function App() {
         {loading ? <h1>loading</h1> : null}
         <ul>
           {movieData.map((item, key) => (
-            <div key={item.id}>
-              <div className="thumbnail">
-                <img src={item.medium_cover_image} alt="썸네일" onError={handleImgError} />
-              </div>
-              <h2>
-                {key + 1} {item.title}
-              </h2>
-              <div className="rating">{item.rating}</div>
-
-              {item.hasOwnProperty("genres") ? (
-                <ul>
-                  {item.genres.map((g, index) => (
-                    <li key={index}>{g}</li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
+            <Movie img={item.medium_cover_image} title={item.title} rating={item.rating} genres={item.genres} key={key} />
           ))}
         </ul>
         <button onClick={onClick}>클릭시 콘솔</button>
