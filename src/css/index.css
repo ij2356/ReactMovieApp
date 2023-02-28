@@ -16,5 +16,6 @@ a:hover{color:#003300;}
 .list .movieList{display:flex;flex-wrap: wrap;margin:0 -6px;}
 .list .movieList > li{width:20%;padding:0 6px;box-sizing: border-box;margin-bottom: 60px;}
 .list .movieList > li .thumbnail{overflow: hidden;}
-.list .movieList > li .thumbnail img{width:100%;transition: 0.4s all;}
+.list .movieList > li .thumbnail a{overflow: hidden;display: block;max-height: 555px;}
+.list .movieList > li .thumbnail img{width:100%;transition: 0.5s all ease-in-out;}
 .list .movieList > li .thumbnail img:hover{transform: scale(1.03);}

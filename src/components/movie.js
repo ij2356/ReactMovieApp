@@ -5,12 +5,12 @@ function Movie({ img, title, rating, genres, id}) {
   return (
     <li key={id}>
       <div className="thumbnail">
-        <Link to={`/movie/${id}`}>
+        <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>
           <img src={img} alt="썸네일" />
         </Link>
       </div>
       <h2 className="fs-16">
-        <Link to={`/movie/${id}`}>{title}</Link>
+        <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>{title}</Link>
       </h2>
       <div className="rating mg-t-10 mg-b-5">평점 : {rating}</div>
 
