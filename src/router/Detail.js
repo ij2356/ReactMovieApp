@@ -18,9 +18,9 @@ function Detail() {
 
   return (
     <div class="detail">
-      <h1>Detail</h1>
-      <div className="thumb">
-        {loading ? <img src={detailData.medium_cover_image} alt="상세썸네일" /> : null}
+      <div>
+        <h1>Detail</h1>
+        <div className="thumbnail w-400">{loading ? <img src={detailData.medium_cover_image} alt="상세썸네일" /> : null}</div>
         <div className="info">
           <a href={detailData.url}>{detailData.title}</a>
           <p>

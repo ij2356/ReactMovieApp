@@ -3,6 +3,12 @@
 body{overflow-x: hidden;font-size: 14px;}
 body *{font-family: 'Noto Sans KR' !important;font-weight: 400;color:#191919;}
 a:hover{color:#003300;}
+img{max-width: 100%;object-fit: contain;display: block;}
+
+.thumbnail{overflow: hidden;}
+.thumbnail a{overflow: hidden;display: block;max-height: 555px;}
+.thumbnail img{width:100%;transition: 0.5s all ease-in-out;}
+.thumbnail img:hover{transform: scale(1.03);}
 
 /*공통 로딩*/
 .loadingWrap{position: fixed;width: 100%;height: 100%;}
@@ -12,10 +18,9 @@ a:hover{color:#003300;}
 	to{transform: rotate(360deg);}
 }
 
+
 /*list */
 .list .movieList{display:flex;flex-wrap: wrap;margin:0 -6px;}
 .list .movieList > li{width:20%;padding:0 6px;box-sizing: border-box;margin-bottom: 60px;}
 .list .movieList > li .thumbnail{overflow: hidden;}
-.list .movieList > li .thumbnail a{overflow: hidden;display: block;max-height: 555px;}
-.list .movieList > li .thumbnail img{width:100%;transition: 0.5s all ease-in-out;}
-.list .movieList > li .thumbnail img:hover{transform: scale(1.03);}
+.list .movieList > li .thumbnail a{max-height: 555px;}
