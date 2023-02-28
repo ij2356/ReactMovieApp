@@ -15,4 +15,6 @@ a:hover{color:#003300;}
 /*list */
 .list .movieList{display:flex;flex-wrap: wrap;margin:0 -6px;}
 .list .movieList > li{width:20%;padding:0 6px;box-sizing: border-box;margin-bottom: 60px;}
-.list .movieList > li img{width:100%;}
+.list .movieList > li .thumbnail{overflow: hidden;}
+.list .movieList > li .thumbnail img{width:100%;transition: 0.4s all;}
+.list .movieList > li .thumbnail img:hover{transform: scale(1.03);}
