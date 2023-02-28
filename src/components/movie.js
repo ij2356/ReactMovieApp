@@ -3,20 +3,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Movie({ img, title, rating, genres, id}) {
   return (
-		<div key ={id}>
+    <li key={id}>
       <div className="thumbnail">
-        <img src={img} alt="썸네일" />
+        <Link to={`/movie/${id}`}>
+          <img src={img} alt="썸네일" />
+        </Link>
       </div>
-      <h2><Link to={`/movie/${id}`}>{title}</Link></h2>
-      <div className="rating">{rating}</div>
+      <h2 className="fs-16">
+        <Link to={`/movie/${id}`}>{title}</Link>
+      </h2>
+      <div className="rating mg-t-10 mg-b-5">평점 : {rating}</div>
 
-     
-			<ul>
-				{genres.map((g, index) => (
-					<li key={index}>{g}</li>
-				))}
-			</ul>
-    </div>
+      <ul>
+        장르
+        {genres.map((g, index) => (
+          <li className="fs-12" key={index}>
+            #{g}
+          </li>
+        ))}
+      </ul>
+    </li>
   );
 }
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
+import React from "react";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Home from "./router/Home.js"
 import Detail from "./router/Detail.js"
 import Coin from "./coin.js"

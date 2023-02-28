@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 
 function Detail() {
+  const [detailData, setDetailData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const { id } = useParams();
   const getMovie = async () => {
     const json = await (await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json();
-    console.log(json.data.movie);
+    console.log("done");
+    setDetailData(json.data.movie);
+    setLoading(true);
   };
-  useEffect(() => { 
-    getMovie()
+  useEffect(() => {
+    getMovie();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <h1>Detail</h1>;
+  return (
+    <div class="detail">
+      <h1>Detail</h1>
+      <div className="thumb">
+        {loading ? <img src={detailData.medium_cover_image} alt="상세썸네일" /> : null}
+        <div className="info">
+          <a href={detailData.url}>{detailData.title}</a>
+          <p>
+            년도 {detailData.year}
+            <br />
+            평점 {detailData.rating}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Detail;
