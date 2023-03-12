@@ -1,5 +1,6 @@
-import React, { ReactPropTypes } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Movie({ img, title, rating, genres, id}) {
   return (
@@ -27,5 +28,11 @@ function Movie({ img, title, rating, genres, id}) {
 }
 
 //프로토타입 쓰기
- 
+Movie.propTypes = {
+  img: PropTypes.string,
+  title: PropTypes.string,
+  rating: PropTypes.string,
+  genres: PropTypes.string,
+  id: PropTypes.string
+};
 export default Movie;

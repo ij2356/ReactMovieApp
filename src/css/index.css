@@ -18,7 +18,8 @@ img{max-width: 100%;object-fit: contain;display: block;}
 	to{transform: rotate(360deg);}
 }
 
-
+/*header*/
+.header{width:100%;}
 /*list */
 .list .movieList{display:flex;flex-wrap: wrap;margin:0 -6px;}
 .list .movieList > li{width:20%;padding:0 6px;box-sizing: border-box;margin-bottom: 60px;}
