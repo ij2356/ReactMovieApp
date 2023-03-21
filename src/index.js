@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import "./css/reset.css";
 import './css/index.css';
 import "./css/inline.css";
+import "./css/font.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

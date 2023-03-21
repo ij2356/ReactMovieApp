@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 
 import React, { useEffect, useState } from "react";
-import Movie from "../components/movie.js";
+import Movie from "../screen/movie.js";
 
 function Home() {
   const [loading, setLoading] = useState(true);

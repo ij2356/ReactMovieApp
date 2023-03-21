@@ -1,14 +1,16 @@
 /*공통*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+h1,h2,h3,h4,h5,h6.h7{font-weight: 400;}
 body{overflow-x: hidden;font-size: 14px;}
-body *{font-family: 'Noto Sans KR' !important;font-weight: 400;color:#191919;}
+
 a:hover{color:#003300;}
 img{max-width: 100%;object-fit: contain;display: block;}
+.pd-con{padding:0 80px;}
 
+/*상품썸네일 공통*/
 .thumbnail{overflow: hidden;}
 .thumbnail a{overflow: hidden;display: block;max-height: 555px;}
-.thumbnail img{width:100%;transition: 0.5s all ease-in-out;}
-.thumbnail img:hover{transform: scale(1.03);}
+.thumbnail img{width:100%;transition: 0.3s all ease-in-out;}
+.thumbnail img:hover{transform: scale(1.02);}
 
 /*공통 로딩*/
 .loadingWrap{position: fixed;width: 100%;height: 100%;}
@@ -20,8 +22,17 @@ img{max-width: 100%;object-fit: contain;display: block;}
 
 /*header*/
 .header{width:100%;}
+
 /*list */
-.list .movieList{display:flex;flex-wrap: wrap;margin:0 -6px;}
-.list .movieList > li{width:20%;padding:0 6px;box-sizing: border-box;margin-bottom: 60px;}
-.list .movieList > li .thumbnail{overflow: hidden;}
+.list .movieList{display:flex;flex-wrap: wrap;margin:0 -8px;}
+.list .movieList > li{width:20%;padding:0 8px;box-sizing: border-box;margin-bottom: 60px;}
+.list .movieList > li .thumbnail{overflow: hidden;position: relative;}
+.list .movieList > li .thumbnail a::after{content:'';display:block;position: absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);top:0;left:0;opacity: 0;transition: 0.3s all;}
+.list .movieList > li .thumbnail a::before{content:'Detail';display:block;position: absolute;width:200px;height:40px;line-height: 40px;background:#fff;top:50%;left:50%;transform: translate(-50%, -50%);transition: 0.3s all;z-index: 1;opacity: 0;text-align: center;font-weight: 500;border-radius: 5px;font-size: 16px;}
+.list .movieList > li .thumbnail a:hover::after{opacity: 1;}
+.list .movieList > li .thumbnail a:hover::before{opacity: 1;}
 .list .movieList > li .thumbnail a{max-height: 555px;}
+.list .movieList > li h2{margin-top:20px;font-weight: 500;font-size:18px;}
+.list .movieList > li ul{font-weight: 500;}
+.list .movieList > li ul li{cursor: pointer;font-weight: 400;}
+.list .movieList > li ul li:hover{font-weight: 500;}
