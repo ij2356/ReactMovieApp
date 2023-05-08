@@ -5,6 +5,7 @@ import Detail from "./router/Detail.js"
 import Coin from "./coin.js"
 import Header from "./components/header.js";
 import Footer from "./components/footer.js";
+import "./css/indexScss.scss";
 
 function App() {
   return (
