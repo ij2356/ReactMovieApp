@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import $, { ready } from "jquery";
 import "./css/reset.css";
-
 import "./css/inline.css";
 import "./css/font.css";
-
-import App from './App';
+import "./css/indexScss.scss";
+import "./customjs/common.js";
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

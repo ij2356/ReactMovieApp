@@ -7,7 +7,7 @@ function Footer() {
         <div className="left">
           <img></img>
         </div>
-        <div class="right">
+        <div className="right">
           <ul>
             <li>
               <a href="#">Home</a>

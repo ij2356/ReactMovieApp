@@ -1,26 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Home from "./router/Home.js"
-import Detail from "./router/Detail.js"
-import Coin from "./coin.js"
-import Header from "./components/header.js";
-import Footer from "./components/footer.js";
-import "./css/indexScss.scss";
+import Home from "../router/Home.jsx"
+import Detail from "../router/Detail.jsx"
+import Coin from "../coin.jsx"
+import Header from "./header.jsx";
+import Footer from "./footer.jsx";
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <div className="pd-con">
-        <Router>
+      <Router>
+        <Header></Header>
+        <div className="pd-con" id="content">
+          
           <Routes>
-            <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+            <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />}  />
     
             <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />} />
             {/* <Route path="/movie" element={<Coin />} /> */}
           </Routes>
+          
+        </div >
         </Router>
-      </div >
       <Footer></Footer>
     </>
   );

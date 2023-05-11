@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+
 function Movie({ img, title, rating, genres, id}) {
   return (
     <li key={id}>
@@ -10,7 +11,7 @@ function Movie({ img, title, rating, genres, id}) {
           <img src={img} alt="썸네일" />
         </Link>
       </div>
-      <h2 className="fs-16">
+      <h2 className="fs-20">
         <Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>{title}</Link>
       </h2>
       <div className="rating mg-t-10 mg-b-5">평점 : {rating}</div>
