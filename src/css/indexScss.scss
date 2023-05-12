@@ -201,7 +201,7 @@ img {
 .detail .inner{display:flex;}
 .detail .inner .info{padding-left:30px;}
 .detail .inner .info a{display: block;font-size:20px;font-weight: 500;margin-bottom: 30px;}
-.detail .inner .info p{line-height: 30px;}
+.detail .inner .info p{line-height: 30px;max-width: 400px;word-break: keep-all;}
 .detail .thumbnail{min-width: 400px;}
 .detail .thumbnail img{width: 100%;}
 
