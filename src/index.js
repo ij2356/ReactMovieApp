@@ -4,7 +4,7 @@ import $, { ready } from "jquery";
 import "./css/reset.css";
 import "./css/inline.css";
 import "./css/font.css";
-import "./css/indexScss.scss";
+import "./css/index.css";
 import "./customjs/common.js";
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
